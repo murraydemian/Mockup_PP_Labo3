@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Primer Parcial Laboratorio III</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <style>
+    .table table {
+      text-align: center;
+      border: 1px solid black;
+    }
+  </style>
+  <!-- AGREGAR ARCHIVOS JS AQUI -->
+  <script src="./FRONTEND/Manejadora.js"></script>
+</head>
+
+<body style="background-color:rgba(39, 38, 39, 0.836)">
+  <div class="container" style="background-color:rgb(231, 227, 233)">
+    <br>
+    <br>
+    <h4>ABM - PERRO</h4>
+    <br>
+    <div class="row responsive-utilities-test visible-on">
+
+      <table class="table table" style="width:90%">
+        <tr>
+          <td style="width:45%">
+            <table class="table table-hover" style="background-color:rgb(200, 177, 243)">
+        </tr>
+        <tr>
+          <td><label class="col-md-2 control-label">Tamaño</label></td>
+          <td><input type="text" id="tamaño" /></td>
+        </tr>
+        <tr>
+          <td><label class="col-md-2 control-label">Edad</label></td>
+          <td><input type="text" id="edad" /></td>
+        </tr>
+        <tr>
+          <td><label class="col-md-2 control-label">Precio</label></td>
+          <td><input type="text" id="precio" /></td>
+        </tr>
+        <tr>
+          <td><label class="col-md-2 control-label">Nombre</label></td>
+          <td><input type="text" id="nombre" /></td>
+        </tr>
+        <tr>
+          <td><label class="col-md-2 control-label">Raza</label></td>
+          <td>
+            <select id="raza" class="">
+              <option>Salchicha</option>
+              <option>Chihuahua</option>
+              <option>Pitbull</option>
+              <option>Caniche</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><label class="col-md-2 control-label">Foto</label></td>
+          <td><input type="file" id="foto" name="foto"></td>
+        </tr>
+        <tr>
+          <td colspan="2" style="text-align:center">
+            <div style="height:100px"><img id="imgFoto" src="./BACKEND/fotos/huella_default.png" height="100px"
+                width="100px" /></div><!-- PREVISUALIZACION -->
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <input type="button" value="Agregar JSON" id='btnAgregar' class="btn btn-success"
+              onclick="PrimerParcial.Manejadora.AgregarPerroJSON()" />
+            <input type="button" value="Mostrar JSON" class="btn btn-info"
+              onclick="PrimerParcial.Manejadora.MostrarPerrosJSON()" />
+            <input type="button" value="Agregar en BD" id='btnAgregarBd' class="btn btn-success"
+              onclick="PrimerParcial.Manejadora.AgregarPerroEnBaseDatos()" />
+            <input type="button" value="Verificar y Agregar BD" class="btn btn-danger"
+              onclick="PrimerParcial.Manejadora.VerificarExistencia()" />
+            <input type="button" value="Mostrad BD" class="btn btn-warning"
+              onclick="PrimerParcial.Manejadora.MostrarPerrosBaseDatos()" />
+              <input type="button" value="test" class="btn btn-warning"
+              onclick="PrimerParcial.Manejadora.GetDate()" />
+          </td>
+        </tr>
+      </table>
+      </td>
+      <td>
+        <div class="" style="background-color:rgb(250, 250, 250);">
+          <div id="divTabla">
+          </div>
+        </div>
+      </td>
+      </tr>
+      </table>
+
+    </div>
+</body>
+
+</html>
